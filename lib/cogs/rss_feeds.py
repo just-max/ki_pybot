@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 from lib.db import db
 from lib.bot import Bot
 
-FeedId = Literal['fefe', 'schneier', 'jbl', 'kuketz', 'xkcd']
+FeedId = Literal['schneier', 'jbl', 'kuketz', 'xkcd']
 
 
 @dataclasses.dataclass(frozen=True)
@@ -48,7 +48,6 @@ class Image:
 
 
 FEED_COLOURS: dict[FeedId, int] = {
-    'fefe': 0xFFFFFF,
     'schneier': 0x6b0000,
     'jbl': 0x000000,
     'kuketz': 0x628098,
@@ -56,7 +55,6 @@ FEED_COLOURS: dict[FeedId, int] = {
 }
 
 FEEDS: list[tuple[FeedId, str]] = [
-    ('fefe', 'https://blog.fefe.de/rss.xml?html'),
     ('schneier', 'https://www.schneier.com/feed/'),
     ('jbl', 'https://blog.cr.yp.to/feed.application=xml'),
     ('kuketz', 'https://www.kuketz-blog.de/feed/'),
